@@ -1,6 +1,6 @@
 module Redcarpet
   module Render
-    module HtmlLazyImg
+    module HTMLLazyImg
       VERSION = "0.1.0"
     end
   end

@@ -4,7 +4,7 @@ require "redcarpet/render/html_lazy_img/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "redcarpet-render-html_lazy_img"
-  spec.version       = Redcarpet::Render::HtmlLazyImg::VERSION
+  spec.version       = Redcarpet::Render::HTMLLazyImg::VERSION
   spec.authors       = ["Yusuke Nakamura"]
   spec.email         = ["yusuke1994525@gmail.com"]
 
