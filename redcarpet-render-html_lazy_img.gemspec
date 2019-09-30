@@ -1,6 +1,6 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "redcarpet/render/html_lazy_img/version"
+require "redcarpet/render/html_lazy_img"
 
 Gem::Specification.new do |spec|
   spec.name          = "redcarpet-render-html_lazy_img"
