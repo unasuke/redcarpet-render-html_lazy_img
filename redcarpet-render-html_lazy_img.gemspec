@@ -8,12 +8,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yusuke Nakamura"]
   spec.email         = ["yusuke1994525@gmail.com"]
 
-  spec.summary       = %q{Custom renderer of the redcarpet to add loading attribute to <img>.}
-  spec.description   = %q{Custom renderer of the redcarpet to add loading attribute to <img>.}
-  spec.homepage      = "https://github.com/unasuke/redcarpet-render-html_lazy_img"
-  spec.license       = "MIT"
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  spec.summary       = 'Custom renderer of the redcarpet to add loading attribute to <img>.'
+  spec.description   = 'Custom renderer of the redcarpet to add loading attribute to <img>. "lazy", "auto", and "eager" are available.'
+  spec.homepage      = 'https://github.com/unasuke/redcarpet-render-html_lazy_img'
+  spec.license       = 'MIT'
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/unasuke/redcarpet-render-html_lazy_img"
