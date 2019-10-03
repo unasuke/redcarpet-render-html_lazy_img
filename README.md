@@ -25,21 +25,21 @@ $ gem install redcarpet-render-html_lazy_img
 
 ## Usage
 
-### loding="lazy"
+### loading="lazy"
 ```ruby
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTMLLazyImg::Lazy)
 markdown.render('![example image](https://example.com/img.png)')
 # => '<p><img loading="lazy" src="https://example.com/img.png" alt="example image" /></p>'
 ```
 
-### loding="auto"
+### loading="auto"
 ```ruby
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTMLLazyImg::Auto)
 markdown.render('![example image](https://example.com/img.png)')
 # => '<p><img loading="auto" src="https://example.com/img.png" alt="example image" /></p>'
 ```
 
-### loding="eager"
+### loading="eager"
 ```ruby
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTMLLazyImg::Eager)
 markdown.render('![example image](https://example.com/img.png)')
