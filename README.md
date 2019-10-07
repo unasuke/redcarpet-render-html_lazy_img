@@ -1,4 +1,9 @@
 # Redcarpet::Render::HTMLLazyImg
+[![Build Status on TravisCI](https://travis-ci.org/unasuke/redcarpet-render-html_lazy_img.svg?branch=master)](https://travis-ci.org/unasuke/redcarpet-render-html_lazy_img)
+[![CircleCI](https://circleci.com/gh/unasuke/redcarpet-render-html_lazy_img/tree/master.svg?style=svg)](https://circleci.com/gh/unasuke/redcarpet-render-html_lazy_img/tree/master)
+[![Build Status on GitHub Actions](https://github.com/unasuke/redcarpet-render-html_lazy_img/workflows/test/badge.svg)](https://github.com/unasuke/redcarpet-render-html_lazy_img/actions)
+![RubyGem version](https://badgen.net/rubygems/v/redcarpet-render-html_lazy_img)
+![MIT License](https://badgen.net/github/license/unasuke/redcarpet-render-html_lazy_img)
 
 Specify "loading" attribute value to converted HTML from markdown.
 You can choose "lazy", "auto", and "eager" to loading attribite by the custom renderer class in `Redcarpet::Markdown.new`.
