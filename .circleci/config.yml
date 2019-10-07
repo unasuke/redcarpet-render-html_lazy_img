@@ -1,0 +1,43 @@
+common_steps: &common_steps
+  working_directory: ~/repo
+  steps:
+    - checkout
+    - run: gem install bundler --force
+    - run:
+        name: install dependencies
+        command: |
+          bundle install --jobs=4 --retry=3 --path vendor/bundle
+    - run: bundle exec rake
+version: 2
+jobs:
+  test-ruby2.6:
+    docker:
+      - image: rubylang/ruby:2.6-bionic
+    <<: *common_steps
+  test-ruby2.5:
+    docker:
+      - image: rubylang/ruby:2.5-bionic
+    <<: *common_steps
+  test-ruby2.4:
+    docker:
+      - image: rubylang/ruby:2.4-bionic
+    <<: *common_steps
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-ruby2.6
+      - test-ruby2.5
+      - test-ruby2.4
+  cron:
+    jobs:
+      - test-ruby2.6
+      - test-ruby2.5
+      - test-ruby2.4
+    triggers:
+      - schedule:
+          cron: "0 0 * * 0"
+          filters:
+            branches:
+              only:
+                - master
