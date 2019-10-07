@@ -1,10 +1,9 @@
 require 'redcarpet'
+require_relative 'html_lazy_img/version'
 
 module Redcarpet
   module Render
     module HTMLLazyImg
-      VERSION = "0.1.0"
-
       class Base < ::Redcarpet::Render::HTML
         def image(*)
           raise NotImplementedError
