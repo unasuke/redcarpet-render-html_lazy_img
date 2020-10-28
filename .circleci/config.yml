@@ -10,6 +10,10 @@ common_steps: &common_steps
     - run: bundle exec rake
 version: 2
 jobs:
+  test-ruby2.7:
+    docker:
+      - image: rubylang/ruby:2.7-bionic
+    <<: *common_steps
   test-ruby2.6:
     docker:
       - image: rubylang/ruby:2.6-bionic
@@ -26,11 +30,13 @@ workflows:
   version: 2
   test:
     jobs:
+      - test-ruby2.7
       - test-ruby2.6
       - test-ruby2.5
       - test-ruby2.4
   cron:
     jobs:
+      - test-ruby2.7
       - test-ruby2.6
       - test-ruby2.5
       - test-ruby2.4
